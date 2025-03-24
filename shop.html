@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biting Forks</title>
+    <link rel="stylesheet" href="shop.css">
+    <script  src="script.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+ <!-- header -->
+ <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <!-- // HEADER -->
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="blog.html">Recipes</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </div>
+
+    <header class="header">
+      <div class="logo">
+          <img src="/images/logo.png" alt="Biting Forks Logo">
+          <span class="site-title">BITING FORKS</span>
+      </div>
+  </header>
+    
+ 
+    <!-- Shop title -->
+    <h2 class="section-title">SHOP.</h2>
+   
+    <section class="shop-page">
+        
+        <!-- Filters Sidebar -->
+        <div class="filters">
+            <h3>Filters</h3>
+            <div class="filter">
+                <label for="type">Type:</label>
+                <select id="type" name="type">
+                    <option value="all">All</option>
+                    <option value="cake">Cake</option>
+                    <option value="cookie">Cookie</option>
+                    <option value="cupcake">Cupcake</option>
+                    <option value="dessert">Dessert</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="flavour">Flavour:</label>
+                <select id="flavour" name="flavour">
+                    <option value="all">All</option>
+                    <option value="chocolate">Chocolate</option>
+                    <option value="vanilla">Vanilla</option>
+                    <option value="tropical">Tropical</option>
+                    <option value="fruit">Fruit</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="filter">
+                <label for="price">Price Range: R<span id="price-value">50</span></label>
+                <input type="range" id="price" name="price" min="120" max="400" step="1" value="100">
+            </div>
+        </div>
+    
+        <!-- Product Grid -->
+        <div class="product-grid-container">
+            <div class="product-grid" id="product-grid">
+                <!-- p card  -->
+                <div class="product-card" data-type="cake" data-flavour="fruit" data-price="250">
+                    <img src="images/berrycake.jpg" alt="Vanilla & Mixed Berry Cake" class="product-image" />
+                    <h4 class="product-name">Vanilla & Mixed Berry Cake</h4>
+                    <p class="product-description">A soft & moist vanilla cake topped with layers of homemade berry compote and silky mixed berry frosting.</p>
+                    <p class="product-price">R250</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <div class="product-card" data-type="cookie" data-flavour="chocolate" data-price="180">
+                    <img src="images/chocchippist.jpg" alt="Pistachio Dark Choc Chip" class="product-image" />
+                    <h4 class="product-name">Pistachio Dark Choc Chip</h4>
+                    <p class="product-description">Rich, chewy dark chocolate chip cookies loaded with crunchy pistachios.</p>
+                    <p class="product-price">R180 (6 pieces)</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <div class="product-card" data-type="dessert" data-flavour="Other" data-price="230">
+                    <img src="images/cinnamonroll.jpg" alt="Classic Cinnamon Rolls" class="product-image" />
+                    <h4 class="product-name">Classic Cinnamon Rolls</h4>
+                    <p class="product-description">Warm, gooey cinnamon rolls swirled with cinnamon sugar, topped with a creamy glaze.</p>
+                    <p class="product-price">R230 (6 pieces)</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <!-- product cards  -->
+
+                <div class="product-card" data-type="cake" data-flavour="chocolate" data-price="280">
+                    <img src="images/chocolateCake.jpg" alt="Chocolate Dream Cake" class="product-image" />
+                    <h4 class="product-name">Chocolate Dream Cake</h4>
+                    <p class="product-description">Rich chocolate layers topped with a silky chocolate infused cream.</p>
+                    <p class="product-price">R280</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <div class="product-card" data-type="dessert" data-flavour="tropical" data-price="300">
+                    <img src="images/Matcha Doughnuts | Ash Baber.jpg" alt="Matcha Doughnuts" class="product-image" />
+                    <h4 class="product-name">Matcha Doughnuts</h4>
+                    <p class="product-description">Soft, fluffy doughnuts infused with premium matcha green tea, subtly sweet, earthy delight for matcha lovers.</p>
+                    <p class="product-price">R300 (6 pieces)</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <div class="product-card" data-type="cookie" data-flavour="Other" data-price="250">
+                    <img src="images/dolce.jpg" alt="Dulce de Leche Cookies" class="product-image" />
+                    <h4 class="product-name">Dulce de Leche Cookies</h4>
+                    <p class="product-description">Melt-in-your-mouth shortbread cookies sandwiched with creamy dulce de leche.</p>
+                    <p class="product-price">R250 (12 pieces)</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <div class="product-card" data-type="dessert" data-flavour="tropical" data-price="160">
+                    <img src="images/Passion Fruit Crème Brûlée – Fig & Olive Platter.jpg" alt="Passionfruit Crème Brulée" class="product-image" />
+                    <h4 class="product-name">Passionfruit Crème Brulée</h4>
+                    <p class="product-description">A tropical twist on a classic favorite, passionfruit crème brûlée  a silky custard infused flavors of passionfruit.</p>
+                    <p class="product-price">R160 (Serves 4)</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <div class="product-card" data-type="cake" data-flavour="fruit" data-price="250">
+                    <img src="images/peachandalmond.jpg" alt="Peach & Almond upsidedown Cake" class="product-image" />
+                    <h4 class="product-name">Peach & Almond upsidedown Cake</h4>
+                    <p class="product-description">Fluffy chiffon Peach & Almond upsidedown Cake finsihed with a dusting of powdered sugar.</p>
+                    <p class="product-price">R250</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <div class="product-card" data-type="dessert" data-flavour="vanilla" data-price="350">
+                    <img src="images/pavlova.jpg" alt="Pavlova with Vanilla Cream & Nectarine" class="product-image" />
+                    <h4 class="product-name">Pavlova with Vanilla Cream & Nectarine</h4>
+                    <p class="product-description">A light and airy pavlova topped with smooth vanilla cream, marinated nectarines, and fresh figs.</p>
+                    <p class="product-price">R350 (6 pieces)</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+                <div class="product-card" data-type="vanilla" data-flavour="dessert" data-price="380">
+                    <img src="images/cheesecake.jpg" alt="Vanilla Cheesecake & White Chocolate Cream" class="product-image" />
+                    <h4 class="product-name">Vanilla Cheesecake & White Chocolate Cream</h4>
+                    <p class="product-description">Creamy vanilla cheesecake, paired with velvety white chocolate whipping cream.</p>
+                    <p class="product-price">R380 (Serves 8)</p>
+                    <a href="contact.html" class="quote-btn">Get a Quote</a>
+                </div>
+
+            
+
+            </div>
+        </div>
+    </section>
+    
+<section class="footer-edit">
+  <!-- // new divder -->
+  <div style="height: 150px; overflow: hidden; margin-bottom: 0rem;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: white;"></path></svg></div>
+ 
+  <!-- Footer Section -->
+<footer class="vampire-footer">
+    <h3 class="footer-title">We're not vampires, but our emails BITE. 🧛‍♂️</h3>
+    <p class="footer-subtext">Sign up for our newsletter — we promise it has that FITING FORKS content!</p>
+
+    <!-- Newsletter Signup Form -->
+    <div class="newsletter-form">
+      <input
+        type="email"
+        id="emailInput"
+        placeholder="Enter your email"
+        required
+      />
+      <button id="subscribeBtn" class="newsletter-button">SUBSCRIBE</button>
+    </div>
+  
+    <!-- Signup Message -->
+    <p id="signupMessage" class="signup-message"></p>
+  </footer>
+</section>
+    
+
+</body>
+</html>

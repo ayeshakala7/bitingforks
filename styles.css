@@ -1,0 +1,683 @@
+/* header */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+  position: fixed;
+  top: 0;
+  /*left: -100%;*/
+  right: -100%;
+  height: 100%;
+  width: 100%;
+  background: #F5D2D2;
+  z-index: 1000; /* Ensure it sits on top of other content */
+  /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+ /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
+  transition: all 0.6s ease-in-out;
+}
+#active:checked ~ .wrapper{
+  /*left: 0;*/
+  right:0;
+}
+.menu-btn{
+  position: absolute;
+  z-index: 2; /* Ensure the hamburger menu is on top */
+  right: 20px;
+  /*left: 20px; */
+  top: 10px;
+  right: 50px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  /*color: #fff;*/
+  /*background: linear-gradient(90deg, #f92c78, #4114a1);*/
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+ /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
+  transition: all 0.3s ease-in-out;
+}
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+	content: "";
+	position: absolute;
+	top: calc(50% - 1px);
+	left: 30%;
+	width: 40%;
+	border-bottom: 2px solid #000;
+	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+}
+
+.close {
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	transition: background .6s;
+}
+
+/* closing animation */
+#active:checked + .menu-btn span {
+	transform: scaleX(0);
+}
+#active:checked + .menu-btn:before {
+	transform: rotate(45deg);
+  border-color: #fff;
+}
+#active:checked + .menu-btn:after {
+	transform: rotate(-45deg);
+  border-color: #fff;
+}
+.wrapper ul{
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  height: 90%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li{
+  height: 10%;
+  margin: 15px 0;
+}
+.wrapper ul li a{
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: white;
+  border-radius: 50px;
+  position: absolute;
+  line-height: 50px;
+  margin: 5px 30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+  overflow: hidden; /* Ensure the background doesn't overflow */
+}
+
+.wrapper ul li a:after{
+  position: absolute;
+  content: "";
+  background: #fcfcfc;
+  color:#F5D2D2;
+   /*background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);*/
+  /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+.wrapper ul li a:hover{
+  background-color: white; /* White background on hover */
+  color: #F5D2D2;
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 30px; /* Adds some padding to the background */
+}
+.wrapper ul li a:hover:after{
+  transform: scaleY(1);
+}
+input[type="checkbox"]{
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  text-align: center;
+  width: 100%;
+  color: #F5D2D2;
+}
+.content .title{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content p{
+  font-size: 35px;
+  font-weight: 600;
+}
+
+#active:checked ~ .wrapper ul li a{
+  opacity: 1;
+}
+.wrapper ul li a{
+  transition: opacity 1.2s, transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform: translateX(100px);
+}
+#active:checked ~ .wrapper ul li a{
+	transform: none;
+	transition-timing-function: ease, cubic-bezier(.1,1.3,.3,1); /* easeOutBackを緩めた感じ */
+   transition-delay: .6s;
+  transform: translateX(-100px);
+}
+
+
+
+/* /////////////////////////////////// */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px; /*  height as needed */
+  margin-right: 10px;
+}
+
+/* ////////////////////////////////////// */
+
+.site-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  margin: 0 15px;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.content {
+  padding: 50px;
+  text-align: center;
+}
+
+/* Main image  */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden; 
+  padding: 20px 0; 
+}
+
+.hero img {
+  max-width: 70%; /* controls size*/
+  height: auto;
+  display: block;
+  margin: 0 auto; /* center */
+}
+
+/* shop button */
+.shop-button {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.btn {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  margin-top: -12px;
+  width: 200px;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* ////////////////////////////////////// */
+
+/* 3 about boxes */
+.features {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* small screens */
+  margin-top: 40px;
+  padding: 0 10%;
+  gap: 20px; /* spacing when stacked */
+}
+
+/* each little about us */
+.feature-box {
+  flex: 1; /* Distribute  */
+  min-width: 250px;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+/* Responsive section */
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column; /* elements vertically */
+    align-items: center; 
+    text-align: center;
+  }
+
+  .feature-box {
+    max-width: 100%; /* make full width */
+    text-align: center;
+  }
+
+  .feature-heading {
+    justify-content: center; /* Center the text & emoji */
+  }
+
+  .hero img{
+    height: 100%;
+    width: 100%;
+  }
+
+  .btn{
+      font-size: 16px;
+      padding: 10px 15px;
+      max-width: 200px; /* mobile */
+  }
+}
+
+/* ////////////////////////////////////// */
+
+/* DIVIDER 1 */
+.dashed-line {
+  width: 100%;
+  height: 20px; /* Line thickness */
+  margin-top: 35px; /* Margin for spacing */
+  position: relative;
+  overflow: hidden; /* no content from spilling out of the container */
+}
+
+.dashed-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%; /*  doubled the width for the repeating line to appear seamless */
+  height: 100%;
+  background: repeating-linear-gradient(90deg, #FFB0B0 0 10px, transparent 10px 20px); /* Dashed pattern */
+  animation: move-dash 20s linear infinite; /* Animation for the line */
+}
+
+.dashed-line:hover::before {
+  background: repeating-linear-gradient(90deg, #FFD09B 0 10px, transparent 10px 20px); /* Change color on hover */
+}
+
+@keyframes move-dash {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -100%; /*  line to the left for effect */
+  }
+}
+
+/* ////////////////////////////////////// */
+
+/* Best Sellers Styles */
+.best-sellers {
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5em;
+  text-align: left;
+  /* margin: 10px 0; */
+  margin-bottom: 20px;
+}
+
+.product-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 30%;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: left;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 30%;
+  min-width: 280px; /* not allowed to becoming too thin */
+  flex: 1;
+}
+
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  object-fit: cover;
+  max-height: 400px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 10px 0;
+  color: #000;
+}
+
+.product-description {
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  text-align: left;
+  max-width: 90%;
+}
+
+.product-price {
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+/* Center the button */
+.quote-btn {
+  text-decoration: none;
+  color: #000;
+  border: 2px solid #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+  text-align: center;
+
+}
+
+.quote-btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* how add space between Cakes and Desserts */
+.category + .category {
+  margin-top: 3cm;
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 100%;
+    width: 90%; /* stack */
+  }
+}
+/* ////////////////////////////////////// */
+/* DIVIDER */
+.divider-section {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* ////////////////////////////////////// */
+
+/* Footer Styling */
+.vampire-footer {
+background-color: #ffffff;
+padding: 2rem 2rem;
+text-align: center;
+margin-top: 0.2rem;
+margin-bottom: 1rem;
+}
+
+.footer-title {
+font-size: 1.8rem;
+margin-bottom: 1rem;
+color: #000000;
+font-family: 'Poppins' 'Sans-Sarif';
+font-weight: 600;
+}
+
+.footer-subtext {
+font-size: 1.1rem;
+margin-bottom: 2rem;
+color: #555;
+}
+
+/* ////////////////////////////////////// */
+
+/* Newsletter Form */
+.newsletter-form {
+display: flex;
+justify-content: center;
+gap: 1rem;
+margin-bottom: 1.5rem;
+}
+
+.newsletter-form input {
+padding: 5px 20px;
+width: 250px;
+border: 1px solid #000000;
+border-radius: 5px;
+font-size: 1rem;
+font-weight: 300;
+}
+
+.newsletter-button {
+padding: 5px 20px;
+background-color: white;
+color: #000;
+border: 1px solid black;
+border-radius: 5px;
+font-weight: 500;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.newsletter-button:hover {
+background-color: black;
+color: white;
+}
+
+/* Signup Message */
+.signup-message {
+font-size: 1.2rem;
+color: #444;
+margin-top: 1rem;
+font-style: italic;
+}
+
+/* ////////////////////////////////////// */
+/* recip */
+.recipes-section {
+  text-align: left;
+  padding: 10px 5%;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Auto-adjust columns */
+  gap: 40px; /* Reduce gap for better spacing on smaller screens */
+  justify-content: center;
+}
+
+/* Recipe cards */
+
+.recipe-card {
+  margin-top: 2px;
+  width: 100%; /* Takes up full grid cell */
+  max-width: 450px; /* Prevents it from getting too large */
+  height: auto; /* Adjusts based on content */
+  text-align: center;
+  position: relative;
+  overflow: visible;
+  z-index: 2; /* Increased */
+}
+
+.recipes-section {
+  position: relative;
+  background-color: rgb(246, 232, 234);
+  z-index: 2; 
+}
+
+.recipe-card img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.recipe-card p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: black;
+  text-align: left;
+}
+
+.vault-button {
+  display: block;
+  width: 100%; /* Make it take full width of the container */
+  max-width: 250px; /* Prevent it from getting too large */
+  margin: 20px auto; /* Center it */
+  margin-top: 70px;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid black;
+  background-color: rgb(246, 232, 234);
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none; /* remove underline if it's a link */
+}
+
+.vault-button:hover {
+  background-color: black;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .recipes-grid {
+   margin-left: 30px;
+  }
+  
+  .vault-button {
+    font-size: 16px;
+    padding: 10px 15px;
+    max-width: 200px; /* Slightly smaller on mobile */
+    margin-top: 60px;
+  }
+  .recipe-card img {
+    height: 100%;
+  }
+  
+}
+
+/* emoji effect */
+.emoji-rain {
+  position: fixed;
+  font-size: 75px; /* 2cm */
+  opacity: 1;
+  pointer-events: none; /* doesnt allow interaction */
+  animation: fall 3s linear forwards;
+  z-index: 10; /*  emojis appear above content */
+}
+@keyframes fall {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+}
+
+

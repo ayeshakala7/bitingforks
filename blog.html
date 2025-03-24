@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Biting Forks</title>
+    <link rel="stylesheet" href="shop.css">
+    
+
+     <!-- header -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+   <script  src="blog.js"></script>
+   <script  src="script.js"></script>
+</head>
+
+
+<body>
+
+    
+    <!-- // HEADER -->
+    <input type="checkbox" id="active">
+    <label for="active" class="menu-btn"><span></span></label>
+    <label for="active" class="close"></label>
+    <div class="wrapper">
+      <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="blog.html">Recipes</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+    </div>
+
+    <!-- // page intro -->
+    <header class="header">
+      <div class="logo">
+          <img src="/images/logo.png" alt="Biting Forks Logo">
+          <span class="site-title">BITING FORKS</span>
+      </div>
+  </header>
+  <section class="blog-intro">
+    <div class="blog-container">
+      <div class="blog-left">
+        <h1>Fork It, Let’s Bake.</h1>
+        <div class="blog-image">
+          <img src="images/deisgnrecipe.png" alt="Biting Forks" />
+        </div>
+      </div>
+      <div class="blog-text">
+        <p class="tagline">Your.<br>New.<br>Favourite.<br>Recipes.</p>
+        <p class="intro-text">You know that feeling when you take a bite of something so good it makes you pause, close your eyes, and just exist in the moment? That’s what Biting Forks is all about. <br>
+
+          <br>This isn’t just another recipe corner—it’s a place for the kind of food that makes you want to steal the last bite off someone’s plate (no shame). We believe in recipes that are bold, a little rebellious, and always worth the effort. <br>
+          <br> Whether it’s a dessert that makes you weak in the knees or a comfort meal that feels like a warm hug, you’ll find it here. So grab a fork (or just use your hands, we won’t judge), and let’s make something delicious.</p>
+      </div>
+    </div>
+  </section>
+  
+<!-- Recipe Filter -->
+<div class="recipe-filter">
+    <button class="filter-btn active" data-category="all">All</button>
+    <button class="filter-btn" data-category="dessert">Desserts</button>
+    <button class="filter-btn" data-category="cake">Cakes</button>
+    <button class="filter-btn" data-category="breakfast">Breakfast</button>
+    <button class="filter-btn" data-category="savory">Savory</button>
+</div>
+
+<!-- RECIPES -->
+<div class="recipe-grid-container">
+    <div class="recipe-grid">
+        <div class="recipe-card" data-category="breakfast">
+            <img src="images/Pancakes with yogurt, sweet dukkah and mango.jpg" alt="The Best Fluffy Pancakes" class="recipe-image" />
+            <h4 class="recipe-name">The Best Fluffy Pancakes</h4>
+            <p class="recipe-ingredients"><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 cup all-purpose flour</li>
+              <li>2 tablespoons sugar</li>
+              <li>1 tablespoon baking powder</li>
+              <li>1/4 teaspoon salt</li>
+              <li>1 egg</li>
+              <li>1 cup milk</li>
+              <li>2 tablespoons melted butter</li>
+              <li>1 teaspoon vanilla extract</li>
+              <li>Yogurt (for serving)</li>
+              <li>1 mango, peeled and chopped (for serving)</li>
+              <li>Sweet sukkah (a blend of sugar, cinnamon, and cardamom) for sprinkling</li>
+            </ul>
+            <p class="recipe-directions"><strong>Directions:</strong></p>
+            <p class="recipe-steps">
+              <ul>
+                <li>In a bowl, whisk together the flour, sugar, baking powder, and salt.</li>
+                <br>
+                <li>In a separate bowl, beat the egg, then add the milk, melted butter, and vanilla extract. Mix well.</li>
+                <br>
+                <li>Pour the wet ingredients into the dry ingredients and stir until just combined. Be careful not to overmix to keep the pancakes fluffy.</li>
+                <br>
+                <li>Heat a non-stick pan or griddle over medium heat. Lightly grease with butter or oil.</li>
+                <br>
+                <li>Pour a scoop of batter onto the pan and cook until bubbles form on the surface. Flip and cook for another minute or until golden brown.</li>
+                <br>
+                <li>Serve the pancakes warm with a dollop of yogurt, a sprinkle of sweet sukkah, and a generous topping of fresh mango.</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="recipe-card" data-category="dessert">
+            <img src="images/pannacotta.jpg" alt="Citrus Panna Cotta" class="recipe-image" />
+            <h4 class="recipe-name">Citrus Panna Cotta</h4>
+            <p class="recipe-ingredients"><strong>Ingredients:</strong></p>
+            <ul>
+              <li>1 1/2 cups heavy cream</li>
+              <li>1/2 cup whole milk</li>
+              <li>1/4 cup sugar</li>
+              <li>2 teaspoons vanilla extract</li>
+              <li>1 tablespoon lemon zest</li>
+              <li>2 teaspoons orange zest</li>
+              <li>1 packet (1 tablespoon) gelatin</li>
+              <li>1/4 cup cold water</li>
+              <li>2 blood oranges, peeled and sliced into rings</li>
+              <li>1 normal orange, peeled and sliced into rings</li>
+              <li>1/4 cup sugar (for soaking the orange slices)</li>
+            </ul>
+            <p class="recipe-directions"><strong>Directions:</strong></p>
+            <p class="recipe-steps">
+              <ul>
+                <li>In a small bowl, sprinkle the gelatin over the cold water and let it sit for 5 minutes to bloom.</li>
+                <br>
+                <li>In a saucepan, combine the heavy cream, milk, sugar, vanilla extract, lemon zest, and orange zest. Heat the mixture over medium heat until it begins to steam, but do not let it boil.</li>
+                <br>
+                <li>Once the mixture is hot, remove it from the heat and stir in the bloomed gelatin until fully dissolved.</li>
+                <br>
+                <li>Pour the cream mixture into small cups or molds and refrigerate for at least 4 hours, or until fully set.</li>
+                <br>
+                <li>While the panna cotta sets, combine the blood orange and normal orange slices in a bowl. Sprinkle the sugar over the slices and gently toss to coat. Let them sit for about 30 minutes to soak in the sugar.</li>
+                <br>
+                <li>Once the panna cotta has set, remove from the fridge. Carefully unmold the panna cotta by running a knife around the edges if needed.</li>
+                <br>
+                <li>Arrange the orange rings on top of the panna cotta, creating a ring around the dessert, and serve chilled.</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="recipe-card" data-category="cake">
+          <img src="images/Lemon Crumble Cake – Fig & Olive Platter.jpg" alt="Lemon Crumble Cake" class="recipe-image" />
+          <h4 class="recipe-name">Lemon Crumble Cake</h4>
+          <p class="recipe-ingredients"><strong>Ingredients:</strong></p>
+          <ul>
+            <li>1 1/2 cups all-purpose flour</li>
+            <li>1 teaspoon baking powder</li>
+            <li>1/2 teaspoon baking soda</li>
+            <li>1/4 teaspoon salt</li>
+            <li>1/2 cup unsalted butter, softened</li>
+            <li>3/4 cup granulated sugar</li>
+            <li>2 large eggs</li>
+            <li>1/2 cup sour cream</li>
+            <li>1 teaspoon vanilla extract</li>
+            <li>1 tablespoon lemon zest</li>
+            <li>1/4 cup fresh lemon juice</li>
+            <li>1/2 cup all-purpose flour (for the crumble topping)</li>
+            <li>1/4 cup light brown sugar</li>
+            <li>1/4 cup unsalted butter, cold and cubed (for crumble topping)</li>
+          </ul>
+          <p class="recipe-directions"><strong>Directions:</strong></p>
+          <p class="recipe-steps">
+            <ul>
+              <li>Preheat the oven to 350°F (175°C). Grease and flour a 9-inch round cake pan.</li>
+            <br>
+            <li>In a medium bowl, whisk together the flour, baking powder, baking soda, and salt. Set aside.</li>
+            <br>
+            <li>In a large bowl, cream together the softened butter and granulated sugar until light and fluffy, about 2-3 minutes. Add the eggs one at a time, beating well after each addition.</li>
+            <br>
+            <li>Mix in the sour cream, vanilla extract, lemon zest, and lemon juice. Stir until well combined.</li>
+            <br>
+            <li>Gradually add the dry ingredients to the wet mixture, mixing just until combined.</li>
+            <br>
+            <li>For the crumble topping, in a small bowl, combine the flour and brown sugar. Add the cold cubed butter and rub the mixture together with your fingers until it resembles coarse crumbs.</li>
+            <br>
+            <li>Pour the cake batter into the prepared cake pan. Sprinkle the crumble topping evenly over the top of the cake batter.</li>
+            <br>
+            <li>Bake for 30-35 minutes, or until a toothpick inserted into the center comes out clean and the top is golden brown.</li>
+            <br>
+            <li>Remove the cake from the oven and allow it to cool in the pan for 10 minutes before transferring it to a wire rack to cool completely.</li>
+            <br>
+            <li>Serve the cake as-is, or dust with powdered sugar for extra sweetness. Enjoy your lemon crumble cake!</li>
+          </ul>
+          </ul>
+          </p>
+      </div>
+
+        <div class="recipe-card" data-category="dessert">
+            <img src="images/basque.jpg" alt="Basque Cheesecake" class="recipe-image" />
+            <h4 class="recipe-name">Basque Cheesecake</h4>
+            <p class="recipe-ingredients"><strong>Ingredients:</strong></p>
+            <ul>
+              <li>2 pounds cream cheese, at room temperature</li>
+              <li>1 cup granulated sugar</li>
+              <li>4 large eggs</li>
+              <li>1/2 cup heavy cream</li>
+              <li>1 teaspoon vanilla extract</li>
+              <li>1/4 cup all-purpose flour</li>
+              <li>1/4 teaspoon salt</li>
+              <li>Butter for greasing the pan</li>
+              <li>1/2 teaspoon of powdered sugar (optional for dusting)</li>
+            </ul>
+            <p class="recipe-directions"><strong>Directions:</strong></p>
+            <p class="recipe-steps">
+              <ul>
+                <li>Preheat your oven to 400°F (200°C). Grease a 9-inch springform pan with butter, lining it with parchment paper to allow for easy removal after baking.</li>
+                <br>
+                <li>In a large bowl, beat the cream cheese and sugar together until smooth and creamy using an electric mixer on medium speed.</li>
+                <br>
+                <li>Add the eggs one at a time, beating well after each addition. Mix in the vanilla extract.</li>
+                <br>
+                <li>In a separate bowl, whisk together the flour and salt, then add them to the cream cheese mixture. Mix until fully combined, scraping down the sides as needed.</li>
+                <br>
+                <li>Slowly add the heavy cream while mixing until the batter is smooth and velvety.</li>
+                <br>
+                <li>Pour the batter into the prepared springform pan, smoothing the top with a spatula.</li>
+                <br>
+                <li>Bake for 50-60 minutes, or until the top is golden brown and the center is slightly jiggly. The cheesecake should have a burnt, uneven top, which is characteristic of the Basque style.</li>
+                <br>
+                <li>Remove from the oven and let cool in the pan for 10-15 minutes, then transfer it to a wire rack to cool completely.</li>
+                <br>
+                <li>Once the cheesecake is completely cooled, remove it from the pan and dust with powdered sugar if desired. Serve at room temperature or chilled.</li>
+            </ul>
+            </p>
+        </div>
+
+        <div class="recipe-card" data-category="breakfast">
+          <img src="images/collection1.jpg" alt="Citrus Panna Cotta" class="recipe-image" />
+          <h4 class="recipe-name">Yogurt Bowl w/ Pistachio Granola & Berries</h4>
+          <p class="recipe-ingredients"><strong>Ingredients:</strong></p>
+          <ul>
+            <li>1 cup Greek yogurt (or preferred yogurt)</li>
+            <li>1/4 cup pistachio chunk granola</li>
+            <li>1/2 cup raspberries</li>
+            <li>1/2 cup blackberries</li>
+            <li>2 tablespoons sugar</li>
+            <li>2-3 tablespoons water (or enough to create a syrup with the sugar)</li>
+            <li>1-2 tablespoons honey (thick and creamy)</li>
+          </ul>
+          <p class="recipe-directions"><strong>Directions:</strong></p>
+          <p class="recipe-steps">
+            <ul>
+              <li>In a small saucepan, combine the raspberries, blackberries, sugar, and water. Heat over low-medium heat until the berries begin to release their juices and the syrup thickens slightly, about 5 minutes. Stir occasionally, ensuring the berries don't break apart. Remove from heat and let cool slightly.</li>
+              <br>
+              <li>In a bowl, layer the Greek yogurt as the base.</li>
+              <br>
+              <li>Once the berry syrup has cooled slightly, drizzle it over the yogurt, ensuring the berries are evenly distributed across the bowl but not broken.</li>
+              <br>
+              <li>Top the yogurt and berries with pistachio chunk granola, adding a nice crunch to each bite.</li>
+              <br>
+              <li>Finish with a generous dollop of thick honey over the top for extra sweetness and a rich texture.</li>
+              <br>
+              <li>Serve immediately and enjoy your delicious, creamy yogurt bowl with pistachio granola and juicy, syrupy berries.</li>
+          </ul>
+          </ul>
+          </p>
+      </div>
+
+
+      <div class="recipe-card" data-category="savory">
+        <img src="images/foccacia.jpg" alt="Fig, Rosemary, and Caramelized Lemon Focaccia with Bocconcini" class="recipe-image" />
+        <h4 class="recipe-name">Fig, Rosemary, and Caramelized Lemon Focaccia with Bocconcini</h4>
+        <p class="recipe-ingredients"><strong>Ingredients:</strong></p>
+        <ul>
+          <li>2 cups all-purpose flour</li>
+            <li>1/2 teaspoon salt</li>
+            <li>1 tablespoon sugar</li>
+            <li>1 packet active dry yeast (or 2 1/4 teaspoons)</li>
+            <li>3/4 cup warm water</li>
+            <li>2 tablespoons olive oil</li>
+            <li>2 tablespoons fresh rosemary, chopped</li>
+            <li>6-8 fresh figs, sliced</li>
+            <li>1 lemon, thinly sliced</li>
+            <li>1 tablespoon honey (for caramelizing the lemon)</li>
+            <li>1/2 cup bocconcini (small fresh mozzarella balls)</li>
+            <li>Olive oil for drizzling</li>
+        </ul>
+        <p class="recipe-directions"><strong>Directions:</strong></p>
+        <p class="recipe-steps">
+          <ul>
+            <li>In a bowl, combine the warm water, sugar, and yeast. Stir to dissolve and let sit for 5-10 minutes, or until the mixture is frothy.</li>
+            <br>
+            <li>Add the flour and salt to the yeast mixture. Stir to combine and form a dough. Knead the dough on a floured surface for about 5 minutes until smooth and elastic.</li>
+            <br>
+            <li>Place the dough in a greased bowl, cover with a clean kitchen towel, and let rise for about 1-2 hours, or until doubled in size.</li>
+            <br>
+            <li>While the dough rises, prepare the caramelized lemon: Heat a skillet over medium heat, add the lemon slices, and drizzle with honey. Cook for 5-7 minutes, turning the slices until they become golden brown and caramelized. Set aside to cool.</li>
+            <br>
+            <li>Preheat the oven to 400°F (200°C). Once the dough has risen, punch it down and transfer it to a greased baking sheet or focaccia pan. Gently stretch the dough out to fit the pan.</li>
+            <br>
+            <li>Using your fingers, create dimples all over the surface of the dough. Drizzle olive oil over the top and sprinkle with chopped rosemary.</li>
+            <br>
+            <li>Place the sliced figs and caramelized lemon slices on top of the dough, pressing them lightly into the surface.</li>
+            <br>
+            <li>Bake the focaccia for 20-25 minutes, or until golden brown and cooked through.</li>
+            <br>
+            <li>Once out of the oven, let the focaccia cool slightly. Tear the bocconcini into small pieces and scatter them over the warm focaccia. Drizzle with a little more olive oil before serving.</li>
+            <br>
+            <li>Slice and enjoy your delicious fig, rosemary, and caramelized lemon focaccia with bocconcini!</li>
+        </ul>
+        </ul>
+        </p>
+    </div>
+
+
+
+    </div>
+</div>
+
+</div>
+
+
+<section class="footer-edit">
+  <!-- // new divder -->
+  <div style="height: 150px; overflow: hidden; margin-bottom: 0rem;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style="stroke: none; fill: white;"></path></svg></div>
+ 
+  <!-- Footer Section -->
+<footer class="vampire-footer">
+    <h3 class="footer-title">We're not vampires, but our emails BITE. 🧛‍♂️</h3>
+    <p class="footer-subtext">Sign up for our newsletter — we promise it has that FITING FORKS content!</p>
+
+    <!-- Newsletter Signup Form -->
+    <div class="newsletter-form">
+      <input
+        type="email"
+        id="emailInput"
+        placeholder="Enter your email"
+        required
+      />
+      <button id="subscribeBtn" class="newsletter-button">SUBSCRIBE</button>
+    </div>
+  
+    <!-- Signup Message -->
+    <p id="signupMessage" class="signup-message"></p>
+  </footer>
+</section>
+
+
+<script  src="blog.js"></script>
+</body>
+</html>
