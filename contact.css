@@ -315,3 +315,37 @@
     max-width: 250px; /* Limit maximum width */
   }
 }
+
+html, body {
+  min-height: 100vh; /* allows the page to grow */
+  background: white;
+  font-family:'Poppins', sans-serif;
+  font-weight: 300;
+}
+
+/* Remove absolute positioning so the wave sits naturally */
+.editorial {
+  display: block;
+  width: 100%;
+  height: 60px;
+  max-height: 60px;
+  margin: 50px 0 0 0; /* normal spacing instead of negative margins */
+  z-index: 5;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .editorial {
+    height: 40px;
+    margin: 20px 0 0 0; /* no negative margin */
+  }
+}
+
+/* FOOTER */
+.vampire-footer-contact {
+  background-color: #FFFCB3;
+  padding: 2rem 1rem;
+  text-align: center;
+  margin-top: 0;  /* remove negative margin */
+}
+
